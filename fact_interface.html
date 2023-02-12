@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <script>
+        var f, a, b, n;
+        function calc(f) {
+            a = parseInt(f.a.value);
+            f.b.value = fact(a);
+        }
+
+        function fact(n) {
+            if (n <= 1) {
+                return 1;
+            }
+            else {
+                return (n * fact(n - 1));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form>
+            <marquee direction="right">
+                <h1>Factorial</h1>
+            </marquee>
+            <h4>Enter the number:
+                <input type="text" name="a">
+            </h4>
+            <h4>The Factorial is:
+                <input type="text" name="b">
+            </h4>
+            <br>
+            <br>
+            <input type="button" value="Find the Factorial" onclick="calc(this.form)">
+    </center>
+    <hr>
+    </form>
+</body>
+
+</html>
